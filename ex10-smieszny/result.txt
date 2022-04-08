@@ -1,0 +1,7 @@
+Clinton, 454	
+Eaton, 539	
+Ingham, 1201	
+Kent, 5150	
+Macomb, 4901	
+Shiawassee, 344	
+Wayne, 4930	
