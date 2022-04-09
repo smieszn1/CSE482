@@ -1,0 +1,238 @@
+Script started on 2022-04-01 20:00:04+0000
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ ls
+ [0m[01;31mca.jar[0m   covid.csv                  'covidAvg$avgReducer.class'   covidAvg.java              'covidMax$maxReducer.class'   covidMax.java   smieszn1.txt
+ [01;31mcm.jar[0m  'covidAvg$avgMapper.class'   covidAvg.class              'covidMax$maxMapper.class'   covidMax.class               result.txt
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ cod[Kvid[K[K[K[K[Khadoop com.sun.tools.javac.Main WordCount.java[1P.java[1P.java[1P.java[1P.java[1P.java[1P.java[1P.java[1P.java[1P.javac.javao.javav.javai.javad.javaM.javaa.javax.java
+/usr/local/hadoop/libexec/hadoop-functions.sh: line 2366: HADOOP_COM.SUN.TOOLS.JAVAC.MAIN_USER: bad substitution
+/usr/local/hadoop/libexec/hadoop-functions.sh: line 2461: HADOOP_COM.SUN.TOOLS.JAVAC.MAIN_OPTS: bad substitution
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ jar cvf wc.jar WordCount*.class[C[1P*.class[1P*.class[1P*.class[1P*.class[1P*.class[1P*.class[1P*.class[1P*.class[1P*.classC*.class[1P*.classc*.classo*.classv*.classi*.classd*.classM*.classa*.classx*.class[1P[1P[1@m[1@a[1@x
+added manifest
+adding: covidMax$maxMapper.class(in = 1936) (out= 885)(deflated 54%)
+adding: covidMax$maxReducer.class(in = 1745) (out= 748)(deflated 57%)
+adding: covidMax.class(in = 1527) (out= 822)(deflated 46%)
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hadoop fs -copyFromLocal document.txt .
+2022-04-01 20:01:29,091 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+copyFromLocal: `document.txt': No such file or directory
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hadoop fs -copyFromLocal document.txt .[C[C[1P .[1P .[1P .[1P .[1P .[1P .[1P .[1P .[1P .[1P .[1P .[1P .c .o .v .i .d .. .c .s .v .
+2022-04-01 20:01:43,064 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+copyFromLocal: `covid.csv': File exists
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hadoop jar wc.jar WordCount document.txt output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P outputr outpute outputs outputu outputl outputt output_ outputm outputa outputx output. outputt outputx outputt output[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@c[1@o[1@v[1@i[1@d[1@M[1@a[1@x[1P[1P[1@m[1@a[1@x[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P output[1P outputc outputo outputv outputi outputd output. outputc outputs outputv output
+2022-04-01 20:02:51,307 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-01 20:02:52,479 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+Exception in thread "main" org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://127.0.0.1:9000/user/ubuntu/output already exists
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:164)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:277)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:143)
+	at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1570)
+	at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1567)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1730)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1567)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1588)
+	at covidMax.main(covidMax.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hadoop fs –getmerge output result.txt_.txtm.txta.txtx.txt
+2022-04-01 20:03:19,377 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+–getmerge: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hadoop fs –getmerge output result_max.txt[1P[1P[1P[1P[1P[1P[1P[1@h[1@d[C[1@f[1@s[1@ [1@d
+2022-04-01 20:03:30,124 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+–getmerge: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hdfs dfs –getmerge output result_max.txt[1P.txt[1P.txt[1P.txt[1P.txt[1P.txtt.txt
+2022-04-01 20:03:41,524 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+–getmerge: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ hdfs dfs -getmerge output_max result.txt
+2022-04-01 20:04:14,064 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-01 20:04:15,582 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ ls
+ [0m[01;31mca.jar[0m   covid.csv                  'covidAvg$avgReducer.class'   covidAvg.java              'covidMax$maxReducer.class'   covidMax.java   result.txt
+ [01;31mcm.jar[0m  'covidAvg$avgMapper.class'   covidAvg.class              'covidMax$maxMapper.class'   covidMax.class               [01;31mmax.jar[0m         smieszn1.txt
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ sudo vim result.txt
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;50r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[50;1H"result.txt" 7L, 82C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1HClinton 454
+Eaton   539
+Ingham  1201
+Kent    5150
+Macomb  4901
+Shiawassee      344
+Wayne   4930
+[94m~                                                                                                                                                                     [9;1H~                                                                                                                                                                     [10;1H~                                                                                                                                                                     [11;1H~                                                                                                                                                                     [12;1H~                                                                                                                                                                     [13;1H~                                                                                                                                                                     [14;1H~                                                                                                                                                                     [15;1H~                                                                                                                                                                     [16;1H~                                                                                                                                                                     [17;1H~                                                                                                                                                                     [18;1H~                                                                                                                                                                     [19;1H~                                                                                                                                                                     [20;1H~                                                                                                                                                                     [21;1H~                                                                                                                                                                     [22;1H~                                                                                                                                                                     [23;1H~                                                                                                                                                                     [24;1H~                                                                                                                                                                     [25;1H~                                                                                                                                                                     [26;1H~                                                                                                                                                                     [27;1H~                                                                                                                                                                     [28;1H~                                                                                                                                                                     [29;1H~                                                                                                                                                                     [30;1H~                                                                                                                                                                     [31;1H~                                                                                                                                                                     [32;1H~                                                                                                                                                                     [33;1H~                                                                                                                                                                     [34;1H~                                                                                                                                                                     [35;1H~                                                                                                                                                                     [36;1H~                                                                                                                                                                     [37;1H~                                                                                                                                                                     [38;1H~                                                                                                                                                                     [39;1H~                                                                                                                                                                     [40;1H~                                                                                                                                                                     [41;1H~                                                                                                                                                                     [42;1H~                                                                                                                                                                     [43;1H~                                                                                                                                                                     [44;1H~                                                                                                                                                                     [45;1H~                                                                                                                                                                     [46;1H~                                                                                                                                                                     [47;1H~                                                                                                                                                                     [48;1H~                                                                                                                                                                     [49;1H~                                                                                                                                                                     [m[50;149H1,1[11CAll[1;1H[?25h[?25l[50;139H:[1;1H[50;1H[K[50;1H:[?2004h[?25hq[?25l[?25h[?25l[?2004l[50;1H[K[50;1H[?2004l[?1l>[?25h[?1049l[23;0;0t]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ mv result.txt result_max.txt
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ ls
+ [0m[01;31mca.jar[0m   covid.csv                  'covidAvg$avgReducer.class'   covidAvg.java              'covidMax$maxReducer.class'   covidMax.java   result_max.txt
+ [01;31mcm.jar[0m  'covidAvg$avgMapper.class'   covidAvg.class              'covidMax$maxMapper.class'   covidMax.class               [01;31mmax.jar[0m         smieszn1.txt
+]0;ubuntu@ip-172-31-7-157: ~/ex9[01;32mubuntu@ip-172-31-7-157[00m:[01;34m~/ex9[00m$ exit
+exit
+
+Script done on 2022-04-01 20:05:17+0000
