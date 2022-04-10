@@ -1,0 +1,236 @@
+Script started on 2022-04-10 18:56:08+0000
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ wget http://www.cse.msu. edu/~cse482/hw5.tar
+--2022-04-10 18:56:29--  http://www.cse.msu./
+Resolving www.cse.msu. (www.cse.msu.)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.cse.msu.’
+--2022-04-10 18:56:29--  http://edu/~cse482/hw5.tar
+Resolving edu (edu)... failed: Temporary failure in name resolution.
+wget: unable to resolve host address ‘edu’
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ wget http://www.cse.msu. edu/~cse482/hw5.tar[1Pedu/~cse482/hw5.tar
+--2022-04-10 18:56:39--  http://www.cse.msu.edu/~cse482/hw5.tar
+Resolving www.cse.msu.edu (www.cse.msu.edu)... 35.9.20.103
+Connecting to www.cse.msu.edu (www.cse.msu.edu)|35.9.20.103|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 81920 (80K) [application/x-tar]
+Saving to: ‘hw5.tar’
+
+hw5.tar                                        0%[                                                                                             ]       0  --.-KB/s               hw5.tar                                      100%[============================================================================================>]  80.00K  --.-KB/s    in 0.09s   
+
+2022-04-10 18:56:39 (926 KB/s) - ‘hw5.tar’ saved [81920/81920]
+
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ ls
+derby.log  [0m[01;34mhive[0m  [01;31mhw5.tar[0m  [01;34mmetastore_db[0m  q1_smieszn1.txt  [01;32msetup.sh[0m
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ tar xvf hw5.tar
+hw5/
+hw5/question3/
+hw5/question3/congestion.csv
+hw5/question3/Calculator.java
+hw5/question1/
+hw5/question1/temp3.txt
+hw5/question1/temp2.txt
+hw5/question1/temp.txt
+hw5/question2/
+hw5/question2/q2solution_template.pptx
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ setup.sj[Kj[Kh
+Setting up ssh keys
+Generating public/private rsa key pair.
+/home/ubuntu/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Qm5UjpOW+SqKHGXuWMXnUrh/FvdZVm093PzpP5l1AjE ubuntu@ip-172-31-22-214
+The key's randomart image is:
++---[RSA 2048]----+
+|        .        |
+|       B    E    |
+|      X .    o..+|
+|    .=.o    .  oB|
+|   o ++oS    . .=|
+|  + ..=o . .  .++|
+| . o.o..  o . =.=|
+|..=. .o  o   o = |
+|.o..   .o       +|
++----[SHA256]-----+
+Starting Hadoop
+WARNING: Attempting to start all Apache Hadoop daemons as ubuntu in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+localhost: namenode is running as process 2625.  Stop it first.
+Starting datanodes
+localhost: datanode is running as process 2776.  Stop it first.
+Starting secondary namenodes [ip-172-31-22-214]
+ip-172-31-22-214: secondarynamenode is running as process 3054.  Stop it first.
+2022-04-10 18:58:35,198 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting resourcemanager
+resourcemanager is running as process 3351.  Stop it first.
+Starting nodemanagers
+localhost: nodemanager is running as process 3507.  Stop it first.
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ ls
+derby.log  [0m[01;34mhive[0m  [01;34mhw5[0m  [01;31mhw5.tar[0m  [01;34mmetastore_db[0m  q1_smieszn1.txt  [01;32msetup.sh[0m
+]0;ubuntu@ip-172-31-22-214: ~[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~[00m$ cd hw5
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ ls
+[0m[01;34mquestion1[0m  [01;34mquestion2[0m  [01;34mquestion3[0m
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop [K[K[K[K[K[K[Khadoop fs -copyFromLoacl [K[K[K[Kcal questio[K[K[K[K[K[K[K./[K[K./question1
+2022-04-10 19:01:43,896 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-10 19:01:47,329 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2022-04-10 19:01:48,491 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2022-04-10 19:01:48,573 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs ls question1
+2022-04-10 19:02:33,417 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ls: Unknown command
+Did you mean -ls?  This command begins with a dash.
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs ls question1[1@-
+2022-04-10 19:03:08,862 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+-rw-r--r--   1 ubuntu supergroup         52 2022-04-10 19:01 question1/temp.txt
+-rw-r--r--   1 ubuntu supergroup         52 2022-04-10 19:01 question1/temp2.txt
+-rw-r--r--   1 ubuntu supergroup         44 2022-04-10 19:01 question1/temp3.txt
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -ls question1[C[K[K[K[K[K[K[K[K[K[K
+2022-04-10 19:03:30,608 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+drwxr-xr-x   - ubuntu supergroup          0 2022-04-10 19:01 question1
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -ls question1-question1dquestion1 question1
+2022-04-10 19:04:20,584 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+drwxr-xr-x   - ubuntu supergroup          0 2022-04-10 19:01 question1
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -ls -d question1/
+2022-04-10 19:04:33,337 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+drwxr-xr-x   - ubuntu supergroup          0 2022-04-10 19:01 question1
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -tail questions[K1/temp.txt
+2022-04-10 19:07:25,367 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-10 19:07:28,468 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+a 1
+b 1
+c 1
+d 1
+e 1
+f 1
+g 1
+h 1
+i 1
+j 1
+k 1
+l 1
+m 1
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -rm question1/temp2.txt
+2022-04-10 19:08:10,422 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Deleted question1/temp2.txt
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -ls question1
+2022-04-10 19:08:42,919 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+-rw-r--r--   1 ubuntu supergroup         52 2022-04-10 19:01 question1/temp.txt
+-rw-r--r--   1 ubuntu supergroup         44 2022-04-10 19:01 question1/temp3.txt
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -mv question.question/question[C[C[C[C[C[C[C[C1 ./question1_
+2022-04-10 19:10:11,069 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -m[Kls
+2022-04-10 19:10:22,473 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+drwxr-xr-x   - ubuntu supergroup          0 2022-04-10 19:08 question1_
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -ls question1_
+2022-04-10 19:10:32,728 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+-rw-r--r--   1 ubuntu supergroup         52 2022-04-10 19:01 question1_/temp.txt
+-rw-r--r--   1 ubuntu supergroup         44 2022-04-10 19:01 question1_/temp3.txt
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -getmerge question1 [K/ result.txt
+2022-04-10 19:12:03,109 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+getmerge: `question1/': No such file or directory
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ hadoop fs -getmerge question1/ result.txt[1@_
+2022-04-10 19:12:12,205 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-10 19:12:13,627 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ ls
+[0m[01;34mquestion1[0m  [01;34mquestion2[0m  [01;34mquestion3[0m  result.txt
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ touch[K[K[K[K[Klestt [K[K[K[K[K[Kc[Kcat result.txt [K
+a 1
+b 1
+c 1
+d 1
+e 1
+f 1
+g 1
+h 1
+i 1
+j 1
+k 1
+l 1
+m 1
+p 2
+q 2
+r 2
+s 2
+t 2
+u 2
+v 2
+w 2
+x 2
+y 2
+z 2
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ stopall.sh-all.sh[C[C[C[C[C[C
+WARNING: Stopping all Apache Hadoop daemons as ubuntu in 10 seconds.
+WARNING: Use CTRL-C to abort.
+Stopping namenodes on [localhost]
+Stopping datanodes
+Stopping secondary namenodes [ip-172-31-22-214]
+2022-04-10 19:13:55,999 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Stopping nodemanagers
+Stopping resourcemanager
+]0;ubuntu@ip-172-31-22-214: ~/hw5[01;32mubuntu@ip-172-31-22-214[00m:[01;34m~/hw5[00m$ exit
+exit
+
+Script done on 2022-04-10 19:14:33+0000
