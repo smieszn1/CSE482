@@ -1,0 +1,4 @@
+SELECT DISTINCT(Title), COUNT(Title) AS stream_count FROM Movie
+	JOIN Stream ON Movie.ID = Stream.MovieID
+ORDER BY stream_count DESC
+LIMIT 10;
